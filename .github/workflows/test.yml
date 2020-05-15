@@ -3,17 +3,11 @@ name: Test
 on:
   pull_request:
     types: [opened, synchronize]
-    paths:
-      - "!**"
-      - "*"
-      - "docs/**"
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Current Build
-        run: echo $GITHUB_RUN_ID
       - name: Checkout
         uses: actions/checkout@v2
       - name: Use Node.js 12
