@@ -32,5 +32,7 @@ jobs:
       - run: echo "registry=${{env.ARTIFACTORY_REGISTRY}}" >> .npmrc && echo "email=${{env.ARTIFACTORY_EMAIL}}" >> .npmrc && echo "_auth=${{env.ARTIFACTORY_AUTH}}" >> .npmrc && echo "always-auth=true" >> .npmrc
       - name: Install
         run: yarn install
+      - name: Build
+        run: yarn build
       - name: Test
         run: yarn test
