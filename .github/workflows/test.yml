@@ -6,9 +6,9 @@ on:
     branches:
       - "master"
     paths:
-      - "!src/**"
       - "*"
       - "docs/**"
+      - "!src/**"
 
 jobs:
   test:
