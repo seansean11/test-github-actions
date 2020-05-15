@@ -2,7 +2,7 @@ name: Test
 
 on:
   pull_request:
-    types: [opened, edited]
+    types: [opened, edited, synchronize]
 
 jobs:
   test:
@@ -36,3 +36,5 @@ jobs:
         run: yarn build
       - name: Test
         run: yarn test
+
+        working-directory: ${{env.working-directory}}
