@@ -1,0 +1,12 @@
+name: Test
+
+on:
+  pull_request:
+    types: [review_requested, opened]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Current Build
+        run: echo $GITHUB_RUN_ID
