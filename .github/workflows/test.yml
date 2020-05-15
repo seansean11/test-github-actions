@@ -5,6 +5,10 @@ on:
     types: [opened, synchronize, reopened]
     branches:
       - "master"
+    paths:
+      - "!**"
+      - "*"
+      - "docs/**"
 
 jobs:
   test:
